@@ -1,0 +1,1 @@
+var object_show={defaults:{dom:"",image:!1,w:2,h:2,x:0,y:0,z:0},render:function(e){var t=this,d=$.extend({},t.defaults,e),a=$(d.dom),g=a.get(0),o=g.getContext("2d"),r=d.w,m=d.h,n=d.x,h=d.y;d.z;o.drawImage($(".tree img").get(0),n,h,r,m)}};
