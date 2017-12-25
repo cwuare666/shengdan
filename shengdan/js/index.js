@@ -22,34 +22,56 @@ $('#snow').let_it_snow({
 	size: 10,
 	image: './image/xuehua.png'
 })
+$(window).load(function(){
 
-$('.center-people').one('animationend', function(){
-	$('.star-first').addClass('fs-one');
-	$('.peoplehide').removeClass('peoplehide');
-	$('.tophide').removeClass('tophide');
+	$('.center-people').one('animationend', function(){
+		$('.star-first').addClass('fs-one');
+		$('.peoplehide').removeClass('peoplehide');
+		$('.tophide').removeClass('tophide');
 
-	$('.fs-one').one('animationend', function(){
-		$(this).addClass('fs-two');
-		$('.fs-two').one('animationend', function(){
-			$('.star-second').addClass('ss-one');
-			$(this).removeClass('fs-two').addClass('fs-two-shadow fs-two-yan');
+		$('.fs-one').one('animationend', function(){
+			$(this).addClass('fs-two');
+			$('.fs-two').one('animationend', function(){
+				$('.star-second').addClass('ss-one');
+				$(this).removeClass('fs-two').addClass('fs-two-shadow fs-two-yan');
+			})
+			
 		})
-		
-	})
-	setTimeout(function(){
-		$('.pdao').removeClass('pdao');
-		$('.fstran').removeClass('fstran');
-		
-	}, 1000)
-	setTimeout(function(){
-		$('.ptran').removeClass('ptran').addClass('pptran');
-		$('.pptran').addClass('pdaotwo');
 		setTimeout(function(){
-			$('.pptran').removeClass('pdaotwo');
+			$('.pdao').removeClass('pdao');
+			$('.fstran').removeClass('fstran');
+			
+		}, 1000)
+		setTimeout(function(){
+			$('.ptran').removeClass('ptran').addClass('pptran');
+			$('.pptran').addClass('pdaotwo');
 			setTimeout(function(){
-				$('.pptran').removeClass('pptran').addClass('move');
-			}, 2000);
-		}, 1200)
-	}, 2500)
+				$('.pptran').removeClass('pdaotwo');
+				$('.snower').addClass('xueren-one');
+				setTimeout(function(){
+					$('.pptran').removeClass('pptran').addClass('move');
+				}, 2000);
+			}, 1200)
+		}, 2500)
+	})
+	$('#audioid')[0].onended = function(){
+		$('.title').remove();
+		$('.snower').remove();
+		$('.center-people').remove();
+		$('.snower').remove();
+		$('.star-first').remove();
+		$('.star-second').remove();
+		$('.people-first').remove();
+		$('.people-second').remove();
+		$('.people-third').remove();
+		$('.people-fourth').remove();
+		$('.people-fifth').remove();
+		$('.people-sixth').remove();
+		$('#audioid').remove();
+		$('.end').removeClass('endhide');
+	}
 })
+
+
+
 

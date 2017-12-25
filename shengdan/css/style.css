@@ -412,6 +412,33 @@ img {
 	animation: ssone 2s ease-out 2s infinite;
 }
 
+.xueren-one {
+	position: absolute;
+	top: 62%;
+	left: 1%;
+	width: 30%;
+	-webkit-animation: xueone 8s infinite;
+	-o-animation: xueone 8s infinite;
+	animation: xueone 8s infinite;
+}
+.end {
+	position: absolute;
+	top: 50%;
+	left: 10%;
+	z-index: 10000;
+	margin-top: -50px;
+	width: 80%;
+	height: 100px;
+	line-height: 100px;
+	border-radius: 10px;
+	background-color: #ffffff;
+	color: #333333;
+	font-size: 20px;
+	text-align: center;
+}
+.endhide {
+	display: none;
+}
 
 
 
