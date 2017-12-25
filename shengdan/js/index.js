@@ -20,9 +20,9 @@ $('#snow').let_it_snow({
 	speed: 0.5,
 	count: 10,
 	size: 10,
-	image: './image/xuehua.png'
+	image: './dist/image/xuehua.png'
 })
-$(window).load(function(){
+$(document).ready(function(){
 
 	$('.center-people').one('animationend', function(){
 		$('.star-first').addClass('fs-one');
