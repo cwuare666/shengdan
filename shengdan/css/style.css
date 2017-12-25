@@ -47,9 +47,20 @@ img {
 	top: 40%;
 	width: 72%;
 	z-index: 20;
+}
+.center-people-show {
 	-webkit-animation: cenpeopshow .5s;
 	-o-animation: cenpeopshow .5s;
 	animation: cenpeopshow .5s;
+}
+.word{
+	position: absolute;
+	left: 15%;
+	top: 55%;
+	width: 70%;
+	line-height: 24px;
+	color: #ed0f42;
+	font-size: 16px;
 }
 .snower {
 	position: absolute;
@@ -135,6 +146,37 @@ img {
 	top: 0;
 	left: 0;
 	z-index: 100;
+}
+.start {
+	position: absolute;
+	top: 35%;
+	left: 30%;
+	z-index: 99999;
+	width: 40%;
+}
+.start:after {
+	display: block;
+	border-top: 2px #ff0000 solid;
+	border-bottom: 2px #ff0000 solid;
+	width: 100%;
+	padding-top: 100%;
+	border-radius: 50%;
+	content: '';
+	-webkit-animation: startrun .3s infinite;
+	-o-animation: startrun .3s infinite;
+	animation: startrun .3s infinite;
+}
+.start:before {
+	position: absolute;
+	bottom: -24px;
+	left: 0;
+	display: block;
+	width: 100%;
+	content: "加载中...";
+	text-align: center;
+	color: #ffffff;
+	line-height: 20px;
+	font-size: 20px;
 }
 .snowertran {
 	-webkit-transition: top .5s;
@@ -429,12 +471,21 @@ img {
 	margin-top: -50px;
 	width: 80%;
 	height: 100px;
-	line-height: 100px;
+	line-height: 50px;
 	border-radius: 10px;
 	background-color: #ffffff;
 	color: #333333;
-	font-size: 20px;
+	font-size: 22px;
 	text-align: center;
+}
+.end h2 {
+	font-size: 20px;
+}
+.end p {
+	font-size: 16px;
+	color: #666666;
+	line-height: 20px;
+	font-weight: normal;
 }
 .endhide {
 	display: none;

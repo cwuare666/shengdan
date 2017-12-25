@@ -14,20 +14,33 @@ $('#snowSmall').let_it_snow({
 	speed: 1,
 	count: 100,
 	size: 1
-})
+});
 
 $('#snow').let_it_snow({
 	speed: 0.5,
 	count: 10,
 	size: 10,
 	image: './dist/image/xuehua.png'
-})
-$(document).ready(function(){
+});
+var name = getParam('name');
+var content = getParam('content');
+var showcont = (name ? name + '：' : '') + (content ? content : '');
+if(showcont.length > 40){
+	showcont = showcont.substring(0, 40);
+}
+showcont = showcont ? showcont : '祝大家圣诞快乐！！'
+var contArr = showcont.split('');
+var showi = 0;
+window.onload = function(){
+	$('.center-people').addClass('center-people-show');
+	$('#audioid')[0].play();
+	$('.start').slideUp();
 
 	$('.center-people').one('animationend', function(){
-		$('.star-first').addClass('fs-one');
 		$('.peoplehide').removeClass('peoplehide');
 		$('.tophide').removeClass('tophide');
+		$('.star-first').addClass('fs-one');
+		$('.start').remove();
 
 		$('.fs-one').one('animationend', function(){
 			$(this).addClass('fs-two');
@@ -36,11 +49,11 @@ $(document).ready(function(){
 				$(this).removeClass('fs-two').addClass('fs-two-shadow fs-two-yan');
 			})
 			
-		})
+		});
 		setTimeout(function(){
 			$('.pdao').removeClass('pdao');
 			$('.fstran').removeClass('fstran');
-			
+			showCont(contArr);
 		}, 1000)
 		setTimeout(function(){
 			$('.ptran').removeClass('ptran').addClass('pptran');
@@ -70,8 +83,22 @@ $(document).ready(function(){
 		$('#audioid').remove();
 		$('.end').removeClass('endhide');
 	}
-})
-
-
+}
+function getParam(name){
+	var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     var r = window.location.search.substr(1).match(reg);
+     if(r!=null)return  decodeURIComponent(r[2]); return null;
+}
+function showCont(cont){
+	setTimeout(function(){
+		if(cont.length < showi){
+			return false;
+		}
+		var word = cont[showi];
+		$('.word').append(word);
+		showi ++;
+		showCont(cont)
+	},500)
+}
 
 
