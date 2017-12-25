@@ -1,6 +1,6 @@
 @import url(./frames.css);
 * { padding: 0; margin: 0; box-sizing: border-box; }
-html,body { width:100%; height: 100%; }
+html,body { width:100%; height: 100%; font-family: "microsoft YaHei", Arial, "Helvetica Neue", Helvetica, sans-serif; }
 
 .bg {
 	width: 100%;
@@ -62,7 +62,7 @@ img {
 	position: absolute;
 	top: 13.5%;
 	left: 15%;
-	width: 21%;
+	width: 20%;
 	z-index: 99;
 }
 
@@ -70,7 +70,7 @@ img {
 	position: absolute;
 	top: 26%;
 	left: 10%;
-	width: 18%;
+	width: 17%;
 	z-index: 21;
 }
 .people-first {
@@ -181,6 +181,36 @@ img {
 	-o-transition: bottom .3s .4s, transform .5s .7s;
 	transition: bottom .3s .4s, transform .5s .7s;
 }
+.people-first.pptran {
+	-webkit-transition: transform .3s;
+	-o-transition: transform .3s;
+	transition: transform .3s;
+}
+.people-second.pptran {
+	-webkit-transition: transform .5s;
+	-o-transition: transform .5s;
+	transition: transform .5s;
+}
+.people-third.pptran {
+	-webkit-transition: transform .5s;
+	-o-transition: transform .5s;
+	transition: transform .5s;
+}
+.people-fourth.pptran {
+	-webkit-transition: transform .5s;
+	-o-transition: transform .5s;
+	transition: transform .5s;
+}
+.people-fifth.pptran {
+	-webkit-transition: transform .5s;
+	-o-transition: transform .5s;
+	transition: transform .5s;
+}
+.people-sixth.pptran {
+	-webkit-transition: transform .5s;
+	-o-transition: transform .5s;
+	transition: transform .5s;
+}
 .people-first.pdao {
 	-webkit-transform: rotateZ(60deg);
 	-moz-transform: rotateZ(60deg);
@@ -217,10 +247,106 @@ img {
 	-ms-transform: rotateZ(90deg);
 	transform: rotateZ(90deg);
 }
+.people-first.pdaotwo {
+	-webkit-transform: rotateZ(-60deg);
+	-moz-transform: rotateZ(-60deg);
+	-ms-transform: rotateZ(-60deg);
+	transform: rotateZ(-60deg);
+}
+.people-second.pdaotwo {
+	-webkit-transform: rotateZ(90deg);
+	-moz-transform: rotateZ(90deg);
+	-ms-transform: rotateZ(90deg);
+	transform: rotateZ(90deg);
+}
+.people-third.pdaotwo {
+	-webkit-transform: rotateZ(-90deg);
+	-moz-transform: rotateZ(-90deg);
+	-ms-transform: rotateZ(-90deg);
+	transform: rotateZ(-90deg);
+}
+.people-fourth.pdaotwo {
+	-webkit-transform: rotateZ(-40deg);
+	-moz-transform: rotateZ(-40deg);
+	-ms-transform: rotateZ(-40deg);
+	transform: rotateZ(-40deg);
+}
+.people-fifth.pdaotwo {
+	-webkit-transform: rotateZ(80deg);
+	-moz-transform: rotateZ(80deg);
+	-ms-transform: rotateZ(80deg);
+	transform: rotateZ(80deg);
+}
+.people-sixth.pdaotwo {
+	-webkit-transform: rotateZ(30deg);
+	-moz-transform: rotateZ(30deg);
+	-ms-transform: rotateZ(30deg);
+	transform: rotateZ(30deg);
+}
+.pptran:after{
+	display: block;
+	position: absolute;
+	left: 0;
+	top: -20px;
+	width: 50px;
+	line-height: 20px;
+	font-size: 14px;
+	background: #ffffff;
+	border-radius: 20px;
+	text-align: center;
+}
+.people-first.pptran:after {
+	content: 'wc';
+}
+.people-second.pptran:after {
+	content: 'nb';
+}
+.people-third.pptran:after {
+	content: 'nx';
+}
+.people-fourth.pptran:after {
+	content: 'd';
+}
+.people-fifth.pptran:after {
+	content: 'md';
+}
+.people-sixth.pptran:after {
+	content: 'r';
+}
+.people-first.move {
+	-webkit-animation: pfmove 12s .5s infinite;
+	-o-animation: pfmove 12s .5s infinite;
+	animation: pfmove 12s .5s infinite;
+}
+.people-second.move {
+	-webkit-animation: psmove 12s .5s infinite;
+	-o-animation: psmove 12s .5s infinite;
+	animation: psmove 12s .5s infinite;
+}
+.people-third.move {
+	-webkit-animation: ptmove 12s .5s infinite;
+	-o-animation: ptmove 12s .5s infinite;
+	animation: ptmove 12s .5s infinite;
+}
+.people-fourth.move {
+	-webkit-animation: pfomove 12s .5s infinite;
+	-o-animation: pfomove 12s .5s infinite;
+	animation: pfomove 12s .5s infinite;
+}
+.people-fifth.move {
+	-webkit-animation: pfimove 12s .5s infinite;
+	-o-animation: pfimove 12s .5s infinite;
+	animation: pfimove 12s .5s infinite;
+}
+.people-sixth.move {
+	-webkit-animation: psimove 12s .5s infinite;
+	-o-animation: psimove 12s .5s infinite;
+	animation: psimove 12s .5s infinite;
+}
 .fs-one {
-	-webkit-animation: fstarLight 2s;
-	-o-animation: fstarLight 2s;
-	animation: fstarLight 2s;
+	-webkit-animation: fstarLight 2s .5s;
+	-o-animation: fstarLight 2s .5s;
+	animation: fstarLight 2s .5s;
 }
 .fs-two {
 	transform: scale(1, 1);
@@ -266,14 +392,24 @@ img {
 	border: 2px #f0f0f0 solid;
 	border-radius: 50%;
 	transform: rotate3d(-1,1,1,60deg);
-	-webkit-animation: fstwoyan 10s ease-out 2s infinite;
-	-o-animation: fstwoyan 10s ease-out 2s infinite;
-	animation: fstwoyan 10s ease-out 2s infinite;
+	-webkit-animation: fstwoyan 6s ease-out 2s infinite;
+	-o-animation: fstwoyan 6s ease-out 2s infinite;
+	animation: fstwoyan 6s ease-out 2s infinite;
 }
-.ss-one {
-	-webkit-animation: ssone 3s ease-out 2s infinite;
-	-o-animation: ssone 3s ease-out 2s infinite;
-	animation: ssone 3s ease-out 2s infinite;
+.ss-one:after {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	box-shadow: 0 0 10px rgba(247, 205, 22, .6), 0 0 25px rgba(247, 205, 22, .6), 0 0 35px rgba(247, 205, 22, .3);
+	-webkit-animation: ssone 2s ease-out 2s infinite;
+	-o-animation: ssone 2s ease-out 2s infinite;
+	animation: ssone 2s ease-out 2s infinite;
 }
 
 

@@ -27,23 +27,29 @@ $('.center-people').one('animationend', function(){
 	$('.star-first').addClass('fs-one');
 	$('.peoplehide').removeClass('peoplehide');
 	$('.tophide').removeClass('tophide');
-	$('.star-second').addClass('ss-one');
 
 	$('.fs-one').one('animationend', function(){
 		$(this).addClass('fs-two');
-
 		$('.fs-two').one('animationend', function(){
+			$('.star-second').addClass('ss-one');
 			$(this).removeClass('fs-two').addClass('fs-two-shadow fs-two-yan');
 		})
 		
 	})
-
 	setTimeout(function(){
 		$('.pdao').removeClass('pdao');
 		$('.fstran').removeClass('fstran');
-		setTimeout(function(){
-			$('.ptran').removeClass('ptran');
-		}, 1000);
+		
 	}, 1000)
+	setTimeout(function(){
+		$('.ptran').removeClass('ptran').addClass('pptran');
+		$('.pptran').addClass('pdaotwo');
+		setTimeout(function(){
+			$('.pptran').removeClass('pdaotwo');
+			setTimeout(function(){
+				$('.pptran').removeClass('pptran').addClass('move');
+			}, 2000);
+		}, 1200)
+	}, 2500)
 })
 
